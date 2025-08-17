@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes sunny {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes rain {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+.animate-sunny {
+  animation: sunny 10s infinite linear;
+  background-size: 200% 200%;
+}
+
+.animate-rain {
+  animation: rain 5s infinite linear;
+  background-size: 100% 200%;
+}
+
+.animate-clouds {
+  animation: clouds 20s infinite linear;
+  background-size: 400% 400%;
+}
+
+@keyframes thunder {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.5); }
+}
+.animate-thunder {
+  animation: thunder 2s infinite ease-in-out;
+}
